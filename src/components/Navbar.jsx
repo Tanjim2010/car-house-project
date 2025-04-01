@@ -39,7 +39,9 @@ const Navbar = () => {
             <div className="navbar-end">
                 <ul className='menu menu-horizontal px-1'>
                     {status === 'authenticated' ?
-                        <><li className='mr-2.5 px-3 py-[6px] transition-colors delay-75 rounded hover:bg-gray-200 cursor-pointer ' onClick={() => signOut()}>SignOut</li></> :
+                        <>
+                        <div className=''><img src={session?.user?.image} className='rounded-full w-10' alt="user image" /></div>
+                        <li className='mr-2.5 px-3 py-[6px] transition-colors delay-75 flex justify-center items-center ml-2 rounded hover:bg-gray-200 cursor-pointer ' onClick={() => signOut()}>SignOut</li></> :
                         <>
                             <li><Link href={'/signIn'}>SignIn</Link ></li>
                             <li><Link href={'/signUp'}>SignUp</Link ></li>
